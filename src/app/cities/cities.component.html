@@ -1,0 +1,28 @@
+<div *ngIf="componentReady">
+  <table>
+    <tr>
+      <th>#</th>
+      <th>City</th>
+      <th>Country</th>
+      <th>All buildings</th>
+      <th>100m+</th>
+      <th>150m+</th>
+      <th>200m+</th>
+      <th>300m+</th>
+      <th>Telecom towers</th>
+      <th>All structures</th>
+    </tr>
+    <tr *ngFor="let city of citiesToDisplay | sortBy: searchParam">
+      <td>{{ city['#'] }}</td>
+      <td>{{ city['city'] }}</td>
+      <td>{{ city['country'] }}</td>
+      <td>{{ city['allbuildings'] }}</td>
+      <td>{{ city['100m+'] }}</td>
+      <td>{{ city['150m+'] }}</td>
+      <td>{{ city['200m+'] }}</td>
+      <td>{{ city['300m+'] }}</td>
+      <td>{{ city['telecomtowers'] }}</td>
+      <td>{{ city['allstructures'] }}</td>
+    </tr>
+  </table>
+</div>
